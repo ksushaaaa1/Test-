@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Тест 2 — Продвинутый: Present / Past / Future</title>
+<title>Тест 1 — Базовый: Present / Past / Future</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     padding: 20px;
     color: #333;
@@ -16,7 +16,7 @@
   .container { max-width: 750px; margin: 0 auto; }
   header { text-align: center; color: #fff; margin-bottom: 25px; }
   header h1 { font-size: 1.9em; margin-bottom: 8px; }
-  header p { opacity: 0.95; }
+  header p { opacity: 0.9; }
   .card {
     background: #fff;
     border-radius: 16px;
@@ -30,7 +30,7 @@
   }
   .question:last-of-type { border-bottom: none; }
   .q-text { font-weight: 600; margin-bottom: 12px; font-size: 1.05em; }
-  .q-num { color: #11998e; }
+  .q-num { color: #764ba2; }
   .options { display: flex; flex-direction: column; gap: 8px; }
   .option {
     display: flex; align-items: center;
@@ -41,16 +41,16 @@
     transition: 0.2s;
     user-select: none;
   }
-  .option:hover { border-color: #11998e; background: #eefbf5; }
-  .option input { margin-right: 10px; accent-color: #11998e; }
+  .option:hover { border-color: #667eea; background: #f5f7ff; }
+  .option input { margin-right: 10px; accent-color: #764ba2; }
   .option.correct { border-color: #2ecc71 !important; background: #eafaf1 !important; }
   .option.wrong { border-color: #e74c3c !important; background: #fdeaea !important; }
   .option.disabled { cursor: default; }
   .explanation {
     margin-top: 10px;
     padding: 10px 14px;
-    background: #eefbf5;
-    border-left: 4px solid #11998e;
+    background: #f0f4ff;
+    border-left: 4px solid #667eea;
     border-radius: 6px;
     font-size: 0.92em;
     color: #444;
@@ -62,7 +62,7 @@
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background: linear-gradient(135deg, #11998e, #38ef7d);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: #fff;
     border: none;
     border-radius: 12px;
@@ -71,7 +71,7 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(17,153,142,0.4); }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(118,75,162,0.4); }
   .result {
     margin-top: 20px;
     padding: 20px;
@@ -90,8 +90,8 @@
 <body>
 <div class="container">
   <header>
-    <h1>🚀 Тест 2 — Продвинутый</h1>
-    <p>Perfect · Continuous · Future forms</p>
+    <h1>⏰ Тест 1 — Базовый</h1>
+    <p>Present · Past · Future</p>
   </header>
 
   <div class="card">
@@ -103,16 +103,16 @@
 
 <script>
 const questions = [
-  { q: "When I arrived, she ___ dinner.", opts: ["cooks", "was cooking", "will cook"], correct: 1, exp: "Past Continuous — действие в процессе в прошлом." },
-  { q: "By the time you come, I ___ the report.", opts: ["finish", "finished", "will have finished"], correct: 2, exp: "Future Perfect — действие завершится к моменту в будущем." },
-  { q: "He ___ in London for five years before he moved to Paris.", opts: ["lives", "had lived", "will live"], correct: 1, exp: "Past Perfect — действие до другого прошлого действия." },
-  { q: "Look at those clouds! It ___.", opts: ["rains", "is going to rain", "rained"], correct: 1, exp: "be going to — предсказание по видимым признакам." },
-  { q: "She ___ her homework by 6 pm yesterday.", opts: ["had done", "does", "will do"], correct: 0, exp: "Past Perfect — завершено к моменту в прошлом." },
-  { q: "This time next week I ___ on the beach.", opts: ["lie", "will be lying", "lay"], correct: 1, exp: "Future Continuous — в конкретный момент в будущем." },
-  { q: "He ___ three cups of coffee today.", opts: ["has drunk", "drank", "will drink"], correct: 0, exp: "Present Perfect — результат к настоящему (today)." },
-  { q: "They ___ when the phone rang.", opts: ["slept", "were sleeping", "will sleep"], correct: 1, exp: "Past Continuous — фоновое действие в прошлом." },
-  { q: "I ___ here since 2010.", opts: ["work", "worked", "have worked"], correct: 2, exp: "Present Perfect — действие длится с прошлого момента (since)." },
-  { q: "By next month, she ___ her driving test.", opts: ["passes", "will have passed", "passed"], correct: 1, exp: "Future Perfect — завершится к моменту в будущем." }
+  { q: "She ___ to school every day.", opts: ["go", "goes", "went"], correct: 1, exp: "Present Simple — регулярное действие (every day)." },
+  { q: "They ___ a film yesterday.", opts: ["watch", "watches", "watched"], correct: 2, exp: "Past Simple — указатель yesterday." },
+  { q: "I ___ my homework tomorrow.", opts: ["will do", "did", "do"], correct: 0, exp: "Future Simple — указатель tomorrow." },
+  { q: "He ___ TV at the moment.", opts: ["watch", "is watching", "watched"], correct: 1, exp: "Present Continuous — действие сейчас (at the moment)." },
+  { q: "We ___ to the park last Sunday.", opts: ["go", "will go", "went"], correct: 2, exp: "Past Simple — указатель last Sunday." },
+  { q: "Look! The cat ___ on the sofa.", opts: ["sleeps", "is sleeping", "slept"], correct: 1, exp: "Present Continuous — действие происходит прямо сейчас (Look!)." },
+  { q: "Next week we ___ a new project.", opts: ["start", "started", "will start"], correct: 2, exp: "Future Simple — указатель next week." },
+  { q: "She ___ her keys yesterday.", opts: ["loses", "lost", "will lose"], correct: 1, exp: "Past Simple — указатель yesterday." },
+  { q: "I usually ___ coffee in the morning.", opts: ["drink", "drank", "will drink"], correct: 0, exp: "Present Simple — привычка (usually)." },
+  { q: "They ___ a party next Friday.", opts: ["have", "had", "are going to have"], correct: 2, exp: "Future — план на будущее (be going to)." }
 ];
 
 const container = document.getElementById('questions');
@@ -159,13 +159,13 @@ document.getElementById('checkBtn').addEventListener('click', function () {
 
   if (score === questions.length) {
     result.className = 'result show excellent';
-    result.textContent = `🏆 Правильно: ${score} из ${questions.length}. Идеально!`;
+    result.textContent = `🏆 Правильно: ${score} из ${questions.length}. Отлично!`;
   } else if (score >= 7) {
     result.className = 'result show good';
     result.textContent = `👍 Правильно: ${score} из ${questions.length}. Хороший результат!`;
   } else {
     result.className = 'result show bad';
-    result.textContent = `😔 Правильно: ${score} из ${questions.length}. Стоит повторить Perfect времена.`;
+    result.textContent = `😔 Правильно: ${score} из ${questions.length}. Стоит повторить.`;
   }
 
   this.textContent = 'Пройти заново';
